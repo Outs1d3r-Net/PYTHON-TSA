@@ -7,7 +7,6 @@
 #LIBRARIES
 
 import os
-import sys
 import commands
 
 #MAIN
@@ -19,8 +18,6 @@ while True:
     if locks == up: #CHECKER
         while True:
             os.system("mplayer alarm.mp3")
-    elif eXit == 1:
-        sys.exit(0)
     else:
         os.system("clear")
         print "CURRENT TIME:-->",locks,"||| AWAKENING:-->",up
