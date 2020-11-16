@@ -33,7 +33,7 @@ if mplayer == 256:
 
 #MAIN
 os.system('clear')
-up = raw_input("Please select data in format: 2020-08-01-07.40.42 (Year-month-day-hour-minutes-seconds)>>> ")
+up = raw_input("Please select data in format: 2020-08-01-07.40.42 (Year-month-day-hour.minutes.seconds)>>> ")
     #EX: 2020-08-01-07.40.42 HIGHLIGHTER - [YEAR - MONTH - DAY - HOUR - MINUTES - SECONDS]
     #Please change this field to the date and time of your preference.
 
@@ -42,6 +42,7 @@ while True:
     locks=commands.getoutput("date +%Y-%m-%d-%H.%M.%S") #CLOCK
     if locks == up: #CHECKER
         while True:
+	    os.system("pactl set-sink-volume 0 153%")
             os.system("mplayer alarm.mp3")
     else:
         os.system("clear")
